@@ -23,7 +23,7 @@ def agregar_estudiante():
     conexion.close()
 
     print("Estudiante agregado exitosamente.") # Mensaje de confirmación
-    
+
 
 def listar_estudiantes():
 
@@ -54,7 +54,7 @@ def buscar_estudiante():
     resultados = cursor.fetchone()
 
     if resultado: 
-        print ("\n ESTUDIANTE ENCONTRADO")
+        print ("\n ESTUDIANTES ENCONTRADO")
 
 
 
