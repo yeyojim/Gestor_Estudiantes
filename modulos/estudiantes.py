@@ -54,7 +54,7 @@ def buscar_estudiante():
     resultados = cursor.fetchone()
 
     if resultado: 
-        print ("\n ESTUDIANTES ENCONTRADO")
+        print ("\n ESTUDIANTES ENCONTRADOS")
 
 
 
