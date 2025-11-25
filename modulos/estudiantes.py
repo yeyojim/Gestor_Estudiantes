@@ -10,13 +10,20 @@ def agregar_estudiante():
     if conexion is None:
         return
 
-    cursor = conexion,cursor()
+    cursor = conexion.cursor()
 
     sql = "INSERT INTO estudiantes (nombre,edad, correo) VALUES (%s,%s,%s)"
     valores = (nombre, edad, correo)
 
+    cursor.execute(sql, valores)
+
+    conexion.commit()
+
     cursor.close()
     conexion.close()
+
+    print("Estudiante agregado exitosamente.") # Mensaje de confirmación
+    
 
 def listar_estudiantes():
 
@@ -27,7 +34,7 @@ def listar_estudiantes():
     print("\n LISTADO DE ESTUDIANTES")
     print ("-" *40)
     for fila in resultados:
-    print(f"ID: {fila[0]} | Nombre: {fila[1]} | Edad: {fila[2]} | Correo: {fila[3]}")
+        print(f"ID: {fila[0]} | Nombre: {fila[1]} | Edad: {fila[2]} | Correo: {fila[3]}")
 
     print("-" * 40 + "\n")
 

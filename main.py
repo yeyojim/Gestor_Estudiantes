@@ -13,19 +13,19 @@ def menu ():
 
         if opcion == "1":
             agregar_estudiante()
-        elif opcion = "2":
+        elif opcion == "2":
             listar_estudiantes()
-        elif opcion = "3":
+        elif opcion == "3":
             buscar_estudiante()
-        elif opcion = "4":
+        elif opcion == "4":
             print("Saliendo del programa....")
             break
         else: print("opcion invalida \n")
 
-if __name__"__main__":
+if __name__=="__main__":
     menu()
 
-    
+
 
 
 
